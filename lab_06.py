@@ -13,7 +13,7 @@ def decode(string): #decoder function
     list = []
     for i in string:
         list.append(int(i))
-    encoded_list = ' '
+    encoded_list = ''
     for idx, j in enumerate(list):
         list[idx] = str(j - 3)
         encoded_list += list[idx]
@@ -31,7 +31,6 @@ if __name__ == '__main__':
             encoded_password = encode(string)
             print('Your password has been encoded and stored!')
         elif option == '2': # prints the encoded password and the decoded password (original)
-            string = decode(encoded_password)
-            print(f'The encoded password is {encoded_password}, and the original password is {string}.')
+            print(f'The encoded password is {encoded_password}, and the original password is {decode(encoded_password)}.')
         elif option == '3':
             break
